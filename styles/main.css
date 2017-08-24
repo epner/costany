@@ -1,0 +1,685 @@
+	* {
+		
+		margin: 0;
+		padding: 0;
+	}
+	
+	html {
+		position: relative;
+		min-height: 100%;
+	}
+	
+	body {
+		margin: 0 0 57px; /* bottom = footer height */
+	}
+
+	/* Slideshow styles */
+
+	.cb-slideshow, .cb-slideshow:after {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		z-index: 0;
+		}
+	
+	.cb-slideshow:after {
+		content: '';
+		background: transparent url("../images/pattern.jpg") cover top left;
+		}
+
+	.cb-slideshow li span { 
+    		width: 100%;
+    		height: 100%;
+    		position: absolute;
+    		top: 0px;
+    		left: 0px;
+    		color: transparent;
+    		background-size: cover;
+    		background-position: 50% 50%;
+    		background-repeat: none;
+    		opacity: 0;
+    		z-index: 0;
+		-webkit-backface-visibility: hidden;
+    		-webkit-animation: imageAnimation 30s linear infinite 0s;
+    		-moz-animation: imageAnimation 30s linear infinite 0s;
+    		-o-animation: imageAnimation 30s linear infinite 0s;
+    		-ms-animation: imageAnimation 30s linear infinite 0s;
+    		animation: imageAnimation 30s linear infinite 0s;  
+		}
+
+	.cb-slideshow li div { 
+    		z-index: 1000;
+    		position: absolute;
+    		bottom: 70px;
+    		left: 0px;
+    		width: 100%;
+    		text-align: center;
+    		opacity: 0;
+    		color: #fff;
+    		-webkit-animation: titleAnimation 30s linear infinite 0s;
+    		-moz-animation: titleAnimation 30s linear infinite 0s;
+    		-o-animation: titleAnimation 30s linear infinite 0s;
+    		-ms-animation: titleAnimation 30s linear infinite 0s;
+    		animation: titleAnimation 30s linear infinite 0s; 
+		}
+	.cb-slideshow li div h3 {
+		font-family: 'Indie Flower', cursive; 
+    		font-size: 200px;
+    		padding: 5px;
+    		line-height: 200px; 
+		}
+	
+	.cb-slideshow li:nth-child(1) span { 
+    		background-image: url("../images/idee1-1.jpg") 
+		}
+
+	.cb-slideshow li:nth-child(2) span { 
+    		background-image: url("../images/idee2-1.jpg");
+    		-webkit-animation-delay: 10s;
+    		-moz-animation-delay: 10s;
+    		-o-animation-delay: 10s;
+    		-ms-animation-delay: 10s;
+    		animation-delay: 10s;
+		}
+
+	.cb-slideshow li:nth-child(3) span { 
+    		background-image: url("../images/idee3-1.jpg");
+    		-webkit-animation-delay: 20s;
+    		-moz-animation-delay: 20s;
+    		-o-animation-delay: 20s;
+    		-ms-animation-delay: 20s;
+    		animation-delay: 20s; 
+		}
+
+	.cb-slideshow li:nth-child(2) div { 
+    		-webkit-animation-delay: 10s;
+    		-moz-animation-delay: 10s;
+    		-o-animation-delay: 10s;
+    		-ms-animation-delay: 10s;
+    		animation-delay: 10s;
+		}
+
+	.cb-slideshow li:nth-child(3) div { 
+    		-webkit-animation-delay: 20s;
+    		-moz-animation-delay: 20s;
+    		-o-animation-delay: 20s;
+    		-ms-animation-delay: 20s;
+    		animation-delay: 20s;
+		}
+
+	/* Animation for the slideshow images */
+
+	@-webkit-keyframes imageAnimation { 
+    		0% { opacity: 0;
+    			-webkit-animation-timing-function: ease-in; }
+    		10% { opacity: 1;
+         		-webkit-animation-timing-function: ease-out; }
+    		25% { opacity: 1 }
+    		50% { opacity: 0 }
+    		100% { opacity: 0 }
+		}
+	@-moz-keyframes imageAnimation { 
+    		0% { opacity: 0;
+    			-moz-animation-timing-function: ease-in; }
+    		10% { opacity: 1;
+         		-moz-animation-timing-function: ease-out; }
+    		25% { opacity: 1 }
+    		50% { opacity: 0 }
+    		100% { opacity: 0 }
+		}
+	@-o-keyframes imageAnimation { 
+    		0% { opacity: 0;
+    			-o-animation-timing-function: ease-in; }
+    		10% { opacity: 1;
+         		-o-animation-timing-function: ease-out; }
+    		25% { opacity: 1 }
+    		50% { opacity: 0 }
+    		100% { opacity: 0 }
+		}
+	@-ms-keyframes imageAnimation { 
+    		0% { opacity: 0;
+    			-ms-animation-timing-function: ease-in; }
+    		10% { opacity: 1;
+         		-ms-animation-timing-function: ease-out; }
+    		25% { opacity: 1 }
+    		50% { opacity: 0 }
+    		100% { opacity: 0 }
+		}
+	@keyframes imageAnimation { 
+   		0% { opacity: 0;
+    			animation-timing-function: ease-in; }
+    		10% { opacity: 1;
+         		animation-timing-function: ease-out; }
+    		25% { opacity: 1 }
+    		50% { opacity: 0 }
+    		100% { opacity: 0 }
+		}
+
+	/* Animation for the title */
+
+	@-webkit-keyframes titleAnimation { 
+    		0% { opacity: 0 }
+    		12% { opacity: 1 }
+    		25% { opacity: 1 }
+    		27% { opacity: 0 }
+    		100% { opacity: 0 }
+		}
+	@-moz-keyframes titleAnimation { 
+    		0% { opacity: 0 }
+    		12% { opacity: 1 }
+    		25% { opacity: 1 }
+    		27% { opacity: 0 }
+    		100% { opacity: 0 }
+		}
+	@-o-keyframes titleAnimation { 
+    		0% { opacity: 0 }
+    		12% { opacity: 1 }
+    		25% { opacity: 1 }
+    		27% { opacity: 0 }
+    		100% { opacity: 0 }
+		}
+	@-ms-keyframes titleAnimation { 
+    		0% { opacity: 0 }
+    		12% { opacity: 1 }
+    		25% { opacity: 1 }
+    		27% { opacity: 0 }
+    		100% { opacity: 0 }
+		}
+	@keyframes titleAnimation { 
+    		0% { opacity: 0 }
+    		12% { opacity: 1 }
+    		25% { opacity: 1 }
+    		27% { opacity: 0 }
+    		100% { opacity: 0 }
+		}
+
+	/* Show at least something when animations not supported */
+
+	.no-cssanimations .cb-slideshow li span {
+		opacity: 1;
+		}
+
+	@media screen and (max-width: 1140px) { 
+    		.cb-slideshow li div h3 { font-size: 120px }
+		}
+
+	@media screen and (max-width: 600px) { 
+    		.cb-slideshow li div h3 { font-size: 60px }
+		}
+	
+	/* Page Container */
+	
+	.content-container {
+		width: 1000px;
+		margin: 0 auto;
+		position: relative;
+		text-align: center;
+		}
+	
+	/* Navigation bar style */
+
+	.navigation-bar {
+		position: relative;
+		}
+	
+	.navigation-bar, .footer {
+		display: block;
+		background-color: white;
+		width: 100%;
+		height: 57px;
+		}
+ 
+	
+	/* Remove margins and padding from the list */
+	
+	ul.topnav {
+    		list-style-type: none;
+    		margin: 0;
+    		padding: 0;
+		background-color: white;
+		overflow: hidden;
+		}
+
+	/* Float the list items side by side */
+
+	ul.topnav li {
+		float: left;
+		}
+
+	/* Style the links inside the list items */
+
+	ul.topnav li a {
+    		display: inline-block;
+    		color: #c6c6c6;
+    		text-align: center;
+    		padding: 20px 16px;
+    		text-decoration: none;
+    		transition: 0.3s;
+    		font-size: 15px;
+		font-family: 'Ubuntu', sans-serif;
+		font-weight: bold;
+		}
+	
+	
+	ul.topnav li#logo {
+		float:right;
+		}
+
+	/* Change color of links on hover */
+	
+	ul.topnav li a:hover {
+		color: #818e94;
+		}
+
+	/* Hide the list item that contains the link that should open and close the topnav on small screens */
+		
+	ul.topnav li.icon {
+		display: none;
+		}
+
+	@media screen and (max-width: 1140px) {
+		.content-container {width: 100%;}
+		}
+
+	/* When the screen is less than 680 pixels wide, hide all list items. Show the list item that contains the link to open and close the topnav (li.icon) */
+
+	@media screen and (max-width:680px) {
+		.content-container {width: 100%;}
+  		ul.topnav li:not(:nth-child(5)) {
+			display: none;
+			}
+		ul.topnav li#logo {
+			float:left;
+				
+			}
+  		ul.topnav li.icon {
+    			float: right;
+    			display: inline-block;
+  			}
+		}
+
+	/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+
+	@media screen and (max-width:680px) {
+		.content-container {width: 100%;}
+  		ul.topnav.responsive {
+			position: relative;
+			}
+  		ul.topnav.responsive li.icon {
+    			position: absolute;
+    			right: 0;
+    			top: 0;
+  			}
+  		ul.topnav.responsive li {
+    			float: none;
+    			display: inline;
+  			}
+  		ul.topnav.responsive li a {
+    			display: block;
+    			text-align: left;
+  			}
+		ul.topnav.responsive li#logo {
+    			display: none;
+  			}		
+		}
+
+	/* Footer styles */
+
+		.footer {
+			position: absolute;
+  			right: 0;
+  			bottom: 0;
+  			left: 0;
+		}
+
+		#footer-contact > a {
+			margin-top: 10px;
+			margin-left: 10px;
+			color: #c6c6c6;
+			float: left;
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: bold;
+			font-size: 14px;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+
+		
+		#footer-contact > a:hover {
+			color: #818e94;
+			text-decoration: none;
+		}
+
+	/* Social Media styles */
+
+		#social-media {
+			list-style-type: none;
+			margin-top: 10px;
+			}
+
+		.social-media-i {
+			float:right;
+			font-size: 25px;
+			text-decoration: none;
+			color: #d1d1d1;
+			margin: 5px;
+			}
+
+		.social-media-i:hover {
+			text-decoration: none;
+			color: #818e94;
+			}
+		
+	/* Contact page styles */
+
+	/* Background of the contact page */
+
+		html.back-body { 
+  			background: url(../images/idee2-1.jpg) no-repeat center center fixed; 
+  			-webkit-background-size: cover;
+  			-moz-background-size: cover;
+  			-o-background-size: cover;
+  			background-size: cover;
+			}
+
+	/* Contact Section Styles*/
+			
+		.section {
+			width: 100%;
+		}
+		
+		.section-1 {
+			height: 500px;
+			color: #FFFFF0;
+			position: relative;
+			font-family: 'Caveat', cursive;
+		}
+		
+		#about-us {
+			width: 800px;
+			height: 400px;
+			padding: 20px;
+			box-sizing: border-box;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: 100px;
+			margin-left: -400px;
+		}
+		
+		#about-us-header {
+			font-size: 40px;
+			margin-bottom: 10px;
+		}
+		
+		#about-us-text {
+			font-size: 25px;
+			font-weight: 500;
+		}
+		
+		.section-2 {
+			height: 500px;
+			background-color: #FFFFFF;
+		}
+			
+	/* Contact form styles */
+	
+		.contact-body {
+			width: 1000px;
+			height: 500px;
+			margin: 0 auto;
+			margin-top: 10px;
+			background-color: rgba(255,255,255, 0.5);
+			font-family: 'Ubuntu', sans-serif;
+			box-sizing: border-box;
+			}
+		.contact-body h2 {
+			text-transform: uppercase;
+			font-size: 30px;
+			padding: 15px 2px 15px 5px;
+			box-sizing: border-box;
+			color: #818e94;
+			font-family: inherit;
+			text-align:center;
+			}
+		.contact-form {	
+			width: 100%;
+			margin: 10px;
+			padding: 10px;
+			box-sizing: border-box;
+			float:left;
+			} 
+
+		.contact-hr, .header-hr, .lower-hr {
+			width: 100%;
+			border: 2px #f3f3f3 solid;			
+			}
+		
+		.contact-hr {
+			margin-bottom: 20px
+			}
+		
+		.header-hr {
+			margin-top: 87px;
+			margin-bottom: 20px
+			}
+		.lower-hr {
+			margin-top: 20px;
+			margin-bottom: 0;
+			}
+		
+		.in-text, textarea {
+			width: 100%;
+			background-color: #f3f3f3;
+			padding: 3px;
+			margin: 5px 2px;
+			border: none;
+			display: inline-block;
+			font-family: 'Ubuntu', sans-serif;
+			color: #818e94;
+			box-sizing: border-box;
+			}
+		.in-text {
+			height: 30px;
+			box-sizing: border-box;
+			}
+
+		.submit-form {
+			width: 100%;
+			height: 50px;
+			background-color: transparent;
+			border: 2px #dddddd solid;
+			border-radius: 1px;
+			color: #dddddd;
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: bold;
+			box-sizing: border-box;
+			}
+
+		.submit-form:hover {
+			border: 3px #818e94 solid;
+			border-radius: 1.5px;
+			color: #818e94;
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: bold;
+			box-sizing: border-box;
+			}
+
+		.contact-form p {
+			color: #FFFFF0;
+			font-weight: bold;
+			font-size: 20px;
+			padding: 5px;
+			text-align: right;
+			box-sizing: border-box;
+			text-align: center;
+			}
+
+	/* Contact form responsive styles */
+
+	@media screen and (max-width: 1140px) { 
+    	.contact-body {
+			width: 100%;
+			height: 520px;
+			}
+		.contact-body h2 {
+			font-size: 30px;
+			padding: 10px 3px;
+			}
+		.contact-form {
+			width: 100%;
+			height: 500px;
+			box-sizing: border-box;
+			}
+		.contact-hr {
+			width: 90%;
+			margin-bottom: 20px;
+			float: left;
+			}
+		.header-hr, lower-hr {
+			width: 90%;
+			float:right;
+			}
+		.header-hr {
+			margin-top: 61px;
+			}
+		.lower-hr {
+			margin-top: 20px;
+			margin-bottom: 0;
+			}
+		.in-text, textarea {
+			width: 90%;
+			}
+		.in-text {
+			height: 25px;
+			}
+		.submit-form {
+			width: 90%;
+			}
+		.contact-form p {
+			font-size: 18px;
+			padding: 5px;
+			text-align: center;
+			}
+		.social-media-i {
+			float:right;
+			font-size: 35px;
+			}
+		#about-us-text {
+			font-size: 23px;
+			font-weight: 500;
+			text-align:center;
+			}
+		
+		}
+
+	@media screen and (max-width: 1020px) { 
+    	.contact-body {
+			width: 100%;
+			height: 520px;
+			}
+		.contact-body h2 {
+			font-size: 28px;
+			padding: 10px 3px;
+			}
+		.contact-form {
+			width: 100%;
+			height: 500px;
+			box-sizing: border-box;
+			}
+		.contact-hr {
+			width: 90%;
+			margin-bottom: 20px;
+			float:left;
+			}
+		.header-hr, .lower-hr {
+			width: 90%;
+			float:right;
+			}
+		.header-hr {
+			margin-top: 57px;
+			}
+		.lower-hr {
+			margin-top: 20px;
+			margin-bottom: 0;
+			}
+		.in-text, textarea {
+			width: 90%;
+			}
+		.in-text {
+			height: 25px;
+			}
+		.submit-form {
+			width: 90%;
+			}
+		.contact-form p {
+			font-size: 18px;
+			padding: 5px;
+			text-align: center;
+			}
+		.social-media-i {
+			float:right;
+			font-size: 35px;
+			}
+		#about-us-text {
+			font-size: 21px;
+			font-weight: 500;
+			text-align:center;
+			}
+		
+		}
+
+	@media screen and (max-width: 680px) { 
+    	.contact-body {
+			width: 100%;
+			height: 420px;
+			text-align: center;
+			}
+		.contact-body h2 {
+			font-size: 25px;
+			padding: 5px 2px;
+			}
+		.contact-form {
+			width: 100%;
+			height: 420px;
+			box-sizing: border-box;
+			margin: 0;
+			}
+		.contact-hr {
+			margin: 5px 0;
+			}
+		.header-hr {
+			margin-top: 25px;
+			margin-bottom: 10px;
+			}
+		.contact-hr, .header-hr, .lower-hr {
+			width: 100%;
+			float: center;
+			}
+		.in-text, textarea {
+			width: 88%;
+			}
+		.in-text {
+			height: 20px;
+			}
+		.submit-form {
+			width: 91%;
+			}
+		.contact-form p {
+			font-size: 15px;
+			padding: 5px;
+			text-align: center;
+			}
+		.social-media-i {
+			text-align: center;
+			font-size: 35px;
+			}
+		#about-us-text {
+			font-size: 19px;
+			font-weight: 500;
+			text-align:center;
+			}
+		}
+	
